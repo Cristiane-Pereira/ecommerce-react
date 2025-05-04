@@ -40,6 +40,7 @@
     border: none;
     outline: none;
     font-weight: 600;
+    border-radius: 4px;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -59,13 +60,15 @@
     width: 100%;
     border: 2px solid #f6f6f6;
     height: 250px;
+    padding: 0px 25px;
     margin-top: 10px;
-    flex-wrap: wrap;
 }
 
 .cart .container .box .img_box img {
-    width: 270px;
-    height: 100%;
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+    margin-top: 40px;
 }
 
 .cart .container .box .detail {
@@ -73,7 +76,6 @@
     width: 100%;
     margin-top: 10px;
     margin-left: 30px;
-    flex-direction: column; 
 }
 
 .cart .container .box .detail .info {
@@ -107,8 +109,6 @@
     margin-top: 65px;
     margin-left: 70px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
 }
 
 .cart .container .box .detail .quantity button {
@@ -119,6 +119,7 @@
     background: #fed700;
     font-weight: 600;
     height: 40px;
+    border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
 }
@@ -133,14 +134,12 @@
     color: #cd176c;
     font-size: 14px;
     font-weight: 600;
-    width: 100px;
+    width: 100%;
 }
 
 .cart .container .box .detail .icon {
     margin-top: 65px;
     margin-left: 60px;
-    display: flex;
-    justify-content: center;
 }
 
 .cart .container .box .detail .icon li {
@@ -161,6 +160,7 @@
     font-size: 22px;
     color: #cd176c;
     text-transform: uppercase;
+    margin-top: 50px;
     font-weight: 600;
 }
 
@@ -171,9 +171,16 @@
     background: #fed700;
     color: #232323;
     font-weight: 600;
+    border-radius: 4px;
     font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.cart .bottom button:hover {
+    background: #cd176c;
+    color: #fed700;
 }
 
 /* Responsividade para telas menores */
@@ -210,48 +217,12 @@
         margin-top: 20px;
     }
 
-    .cart .container .box .detail .icon {
-        margin-left: 0;
-        justify-content: space-between;
-    }
-
     .cart .bottom {
         margin-left: 0;
     }
 
     .cart .bottom button {
-        width: 100%;
+        width: 10%;
         margin-top: 10px;
-    }
-}
-
-/* Responsividade para telas muito pequenas (como celulares de 320px) */
-@media (max-width: 480px) {
-    .cart h3 {
-        font-size: 20px;
-    }
-
-    .cart .container .box .detail .info h3 {
-        font-size: 16px;
-    }
-
-    .cart .container .box .detail .info p {
-        font-size: 12px;
-    }
-
-    .cart .container .box .detail .quantity button {
-        font-size: 14px;
-    }
-
-    .cart .container .box .detail .quantity input {
-        font-size: 12px;
-    }
-
-    .cart .bottom .total h4 {
-        font-size: 18px;
-    }
-
-    .cart .bottom button {
-        font-size: 14px;
     }
 }

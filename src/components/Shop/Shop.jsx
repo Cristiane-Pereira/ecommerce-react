@@ -6,11 +6,11 @@ import './shop.css';
 
 const Shop = ({ shop, filterCategory, allCateCategory, addToCart }) => {
   const [showDetail, setShowDetail] = useState(false);
-  const [detail, setDetail] = useState(null); // começa como null
+  const [detail, setDetail] = useState(null);
 
   const detailProduct = (product) => {
-    setDetail(product); // define o produto clicado
-    setShowDetail(true); // abre o modal
+    setDetail(product);
+    setShowDetail(true);
   };
 
   const closeDetail = () => {
@@ -33,7 +33,7 @@ const Shop = ({ shop, filterCategory, allCateCategory, addToCart }) => {
               <h4># {detail.cat}</h4>
               <h2>{detail.name}</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis</p>
-              <h3>R$ {detail.price}</h3>
+              <h3>{detail.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h3>
               <button onClick={() => addToCart(detail)}>Adicionar ao carrinho</button>
             </div>
           </div>
@@ -41,8 +41,8 @@ const Shop = ({ shop, filterCategory, allCateCategory, addToCart }) => {
       )}
 
       <div className="shop">
-        <h2># shop</h2>
-        <p>Home . Shop</p>
+        <h2># Comprar</h2>
+        <p>Home . Comprar</p>
         <div className="container">
           <div className="left_box">
             <div className="category">
@@ -55,7 +55,7 @@ const Shop = ({ shop, filterCategory, allCateCategory, addToCart }) => {
                   <li onClick={() => filterCategory("tv")}># tv</li>
                   <li onClick={() => filterCategory("phone")}># phone</li>
                   <li onClick={() => filterCategory("computer")}># computer</li>
-                  <li onClick={() => filterCategory("clock")}># clock</li>
+                  <li onClick={() => filterCategory("clock")}># smartband</li>
                 </ul>
               </div>
             </div>
@@ -89,7 +89,7 @@ const Shop = ({ shop, filterCategory, allCateCategory, addToCart }) => {
                       </div>
                       <div className="detail">
                         <h3>{curElm.name}</h3>
-                        <p>R$ {curElm.price}</p>
+                        <p>{curElm.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
                         <button onClick={() => addToCart(curElm)}>Adicionar ao carrinho</button>
                       </div>
                     </div>

@@ -17,6 +17,7 @@
     border: 1px solid #f6f6f6;
     border-radius: 5px;
     padding: 20px 30px;
+    z-index: 3;
 }
 
 .product_detail .close-btn {
@@ -84,11 +85,18 @@
     border: none;
     outline: none;
     background: none;
-    background: #cd1e76;
-    color: #ffffff;
+    background: #fed700;
+    color: #232323;
+    border-radius: 4px;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.product_detail .container .info button:hover {
+    background: #cd1e76;
+    color: #fed700;
 }
 
 .shop {
@@ -98,7 +106,6 @@
 
 .shop h2 {
     text-transform: uppercase;
-    letter-spacing: 1px;
     letter-spacing: 1px;
     color: #232323;
     font-size: 32px;
@@ -160,7 +167,7 @@
     color: #8a8a8a;
     letter-spacing: 1px;
     cursor: pointer;
-    trasition: 0.5s;
+    transition: 0.5s;
 }
 
 .shop .container .left_box .category .box ul li:hover {
@@ -207,7 +214,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space;
+    justify-content: flex-start;
 }
 
 .shop .container .right_box .product_box .product_container .box {
@@ -217,6 +224,10 @@
     border: 3px solid #f6f6f6;
     margin-left: 15px;
     margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .shop .container .right_box .product_box .product_container .box .img_box {
@@ -237,7 +248,7 @@
     padding: 10px;
     margin-top: 10px;
     margin-left: 55px;
-    trasition: 0.5s;
+    transition: 0.5s;
 }
 
 .shop .container .right_box .product_box .product_container .box .img_box .icon li {
@@ -249,7 +260,7 @@
     background: #fff;
     z-index: 1;
     cursor: pointer;
-    trasition: 0.5s;
+    transition: 0.5s;
 }
 
 .shop .container .right_box .product_box .product_container .box .img_box .icon li:hover {
@@ -262,8 +273,12 @@
 }
 
 .shop .container .right_box .product_box .product_container .box .detail {
-    margin-top: 10px;
-    width: 100%;
+    padding: 10px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .shop .container .right_box .product_box .product_container .box .detail h3 {
@@ -282,16 +297,17 @@
 }
 
 .shop .container .right_box .product_box .product_container .box .detail button {
-    margin-top: 10px;
-    margin-left: 19%;
+    align-self: center;
+    margin-top: auto;
     padding: 10px 20px;
     border: none;
     outline: none;
     color: #232323;
     background: #fed700;
+    border-radius: 4px;
     font-weight: 600;
     cursor: pointer;
-    trasition: 0.5s;
+    transition: 0.5s;
 }
 
 .shop .container .right_box .product_box .product_container .box .detail button:hover {

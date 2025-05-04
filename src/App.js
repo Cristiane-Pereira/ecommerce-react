@@ -37,10 +37,10 @@ const App = () => {
     });
 
     if(isExist) {
-      alert("Este produto já foi adicionado ao carrinho");
+      alert("Este produto já foi adicionado ao carrinho!");
     } else {
       setCart([...cart, {...product, qty: 1}]);
-      alert("Adicionado ao carrinho")
+      alert("Adicionado ao carrinho!")
     }
   }
 

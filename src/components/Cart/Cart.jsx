@@ -43,7 +43,7 @@ const Cart = ({cart, setCart}) => {
   return (
     <>
       <div className="cart">
-        <h3>#cart</h3>
+        <h3># Carrinho</h3>
          {cart.length === 0 && (
             <>
                 <div className="empty_cart">
@@ -64,7 +64,7 @@ const Cart = ({cart, setCart}) => {
                         <div className="info">
                             <h4>{curElm.cat}</h4>
                             <h3>{curElm.name}</h3>
-                            <p>Preço: R$ {curElm.price}</p>
+                            <p>Preço: {curElm.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
                             <p>Total: R$ {(curElm.price * curElm.qty).toFixed(2)}</p>
                         </div>
                         <div className="quantity">
@@ -84,7 +84,7 @@ const Cart = ({cart, setCart}) => {
             {cart.length > 0 && 
               <>
                 <div className="total">
-                    <h4>Total: R$ {(total).toFixed(2)}</h4>
+                  <h4>Total: {total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h4>
                 </div>
                 <button>Confira</button>
               </>
